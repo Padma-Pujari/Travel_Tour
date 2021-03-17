@@ -4,11 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+
     <title>Travel_Tour</title>
   </head>
   <body>
-    <nav class="navbar background">
-      <ul class="nav-list">
+    <nav class="navbar background h-nav">
+      <ul class="nav-list v-class">
+        <!--v-class stands for velocity i.e to hide the navigation bar when the media query is fired-->
         <div class="logo">
           <img
             src="img/boystone.jpg"
@@ -16,12 +18,17 @@
             alt="boy jumping over the stone"
           />
         </div>
-        <li><a href="About.html">About Us</a></li>
-        <li><a href="Contact_Us.html">Contact Us</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
       </ul>
-      <div class="rightNav">
+      <div class="rightNav v-class">
         <input type="text" name="search" id="search" />
         <button class="btn btn-sm">Search</button>
+      </div>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
       </div>
     </nav>
 
@@ -102,5 +109,48 @@
         />
       </div>
     </section>
+
+    <section class="contact" id="contact">
+      <h2 class="text-centre">Contact Us</h2>
+      <div class="form">
+        <input
+          class="form-input"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Enter your name"
+        />
+        <input
+          class="form-input"
+          type="number"
+          name="phone"
+          id="phone"
+          placeholder="Enter your Mobile number"
+        />
+        <input
+          class="form-input"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Enter your Email Id"
+        />
+        <textarea
+          class="form-input"
+          name="text"
+          id="text"
+          cols="30"
+          rows="10"
+          placeholder="Let us know about your experience"
+        ></textarea>
+
+        <button class="btn btn-sm">Submit</button>
+      </div>
+    </section>
+    <footer class="background">
+      <p class="text-footer">
+        Copyright &copy; 2030 www.travel_tour.com - All rights reserved
+      </p>
+    </footer>
+    <script src="js/respo.js"></script>
   </body>
 </html>
